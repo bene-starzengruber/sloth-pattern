@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 
 import { ComposerComponent } from './composer.component';
@@ -7,7 +8,7 @@ import { ComposerComponent } from './composer.component';
   declarations: [
     ComposerComponent
   ],
-  imports: [MatDialogModule],
+  imports: [MatDialogModule, MatButtonModule],
   providers: []
 })
 export class ComposerModule { }
