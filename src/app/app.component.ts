@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ComposerComponent } from './composer/composer.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'sloth';
+
+  constructor(public dialog: MatDialog) { }
+
+  openDialog() {
+    this.dialog.open(ComposerComponent, { width: '500px' });
+  }
+
 }
