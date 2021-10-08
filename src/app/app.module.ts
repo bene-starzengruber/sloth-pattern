@@ -4,15 +4,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ComposerModule } from './composer/composer.module';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, MatDialogModule, MatButtonModule, BrowserAnimationsModule, ComposerModule, 
+    BrowserModule, MatDialogModule, MatButtonModule, BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ComposerComponent } from './composer/composer.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +11,9 @@ export class AppComponent {
   constructor(public dialog: MatDialog) { }
 
   openDialog() {
-    this.dialog.open(ComposerComponent, { width: '500px' });
+    import('./composer/index').then(index => {
+      this.dialog.open(index.ComposerComponent, { width: '500px' });
+    });
   }
 
 }
