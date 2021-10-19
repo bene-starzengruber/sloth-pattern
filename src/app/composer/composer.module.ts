@@ -3,12 +3,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 
 import { ComposerComponent } from './composer.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [
-    ComposerComponent
-  ],
-  imports: [MatDialogModule, MatButtonModule],
-  providers: []
-})
-export class ComposerModule { }
+            declarations: [
+              ComposerComponent
+            ],
+            imports: [CommonModule, MatDialogModule, MatButtonModule],
+            providers: []
+          })
+export class ComposerModule {
+}

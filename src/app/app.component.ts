@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ComposerService } from './composer/composer.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,9 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AppComponent {
 
-  constructor(public dialog: MatDialog) { }
+  name$ = this.composerService.getName();
+
+  constructor(private dialog: MatDialog, private composerService: ComposerService) { }
 
   openDialog() {
     import('./composer/index').then(index => {

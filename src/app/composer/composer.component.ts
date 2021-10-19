@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ComposerService } from './composer.service';
 
 @Component({
   selector: 'app-composer',
   templateUrl: './composer.component.html'
 })
-export class ComposerComponent implements OnInit {
+export class ComposerComponent {
 
-  constructor() { }
+  name$ = this.composerService.getName();
 
-  ngOnInit(): void {
+  constructor(public composerService: ComposerService) {
   }
 
 }
