@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { ComposerService } from './composer/composer.service';
 
 @Component({
@@ -11,12 +10,10 @@ export class AppComponent {
 
   name$ = this.composerService.getName();
 
-  constructor(private dialog: MatDialog, private composerService: ComposerService) { }
+  constructor(private composerService: ComposerService) { }
 
   openDialog() {
-    import('./composer/index').then(index => {
-      this.dialog.open(index.ComposerComponent, { width: '500px' });
-    });
+    this.composerService.openDialog();
   }
 
 }
