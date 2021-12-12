@@ -3,11 +3,12 @@ import { ComposerService } from './composer.service';
 
 @Component({
   selector: 'app-composer',
-  templateUrl: './composer.component.html'
+  templateUrl: './composer.component.html',
+  providers: [ComposerService]
 })
 export class ComposerComponent {
 
-  name$ = this.composerService.exposed.getName();
+  name$ = this.composerService.name$;
 
   constructor(public composerService: ComposerService) {
   }
