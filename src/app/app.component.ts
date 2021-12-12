@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ComposerExposedService } from './composer';
+import { ComposerExposedService } from './composer/composer-exposed.service';
 
 @Component({
              selector: 'app-root',
