@@ -16,4 +16,8 @@ export class AppComponent {
     this.composerService.openDialog();
   }
 
+  preload() {
+    this.composerService.preload();
+  }
+
 }

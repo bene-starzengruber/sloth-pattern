@@ -19,9 +19,14 @@ export class ComposerExposedService {
   }
 
   openDialog(): void {
-    import('./index').then(index => {
+    this.preload().then(index => {
       this.dialog.open(index.ComposerComponent, { width: '500px' });
-    });
+    })
+  }
+
+  /** http://instantclick.io/click-test */
+  preload(): Promise<typeof import('./index')> {
+    return import('./index');
   }
 
 }
