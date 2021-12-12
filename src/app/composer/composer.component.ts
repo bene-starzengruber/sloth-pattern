@@ -7,7 +7,7 @@ import { ComposerService } from './composer.service';
 })
 export class ComposerComponent {
 
-  name$ = this.composerService.getName();
+  name$ = this.composerService.exposed.getName();
 
   constructor(public composerService: ComposerService) {
   }
